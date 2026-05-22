@@ -1,6 +1,6 @@
 # Vocobox
 
-An Audio Unit (v2) port of the classic **mda TalkBox** LPC vocoder, rebuilt for modern macOS with full Apple Silicon support.
+An Audio Unit (v2) LPC vocoder for modern macOS with full Apple Silicon support.
 
 ## What it does
 
@@ -15,11 +15,11 @@ The LPC algorithm extracts the spectral envelope of the modulator, then applies 
 - Universal Binary: runs natively on Apple Silicon (arm64) and Intel (x86_64)
 - Audio Unit v2 compatible with Logic Pro, GarageBand, and other AU hosts
 - Two-input effect with configurable wet/dry mix, quality, and input swap
-- Fixed several memory safety issues from the original codebase (see below)
+- Fixed several memory safety issues present in older LPC vocoder implementations
 
 ## Apple Silicon compatibility fixes
 
-The original mda TalkBox was written for PowerPC and later compiled for Intel, where the call stack tends to be pre-zeroed by the allocator. On Apple Silicon (ARM64), the stack contains arbitrary data, which exposed several latent bugs:
+Older LPC vocoder codebases were written for PowerPC and later compiled for Intel, where the call stack tends to be pre-zeroed by the allocator. On Apple Silicon (ARM64), the stack contains arbitrary data, which exposed several latent bugs:
 
 **Uninitialized LPC arrays** — the `lpc()` function declared stack arrays `z[]`, `r[]`, `k[]` of size `ORD_MAX` (50) but only initialized indices `0..o`. On Intel this was benign; on ARM64 the garbage values corrupted the lattice filter, causing the output gain to collapse and producing a muffled, attenuated sound. Fixed by zeroing all elements before use.
 
@@ -68,11 +68,6 @@ cp -R Vocobox.component ~/Library/Audio/Plug-Ins/Components/
 2. Route your carrier (synth) to the plugin's first input bus
 3. Route your modulator (voice) to the second input bus
 4. Adjust Quality and Wet to taste
-
-## Credits
-
-Original mda TalkBox DSP by Paul Kellett — [mda-vst.com](http://mda-vst.com)  
-Original source released under GPL-2.0.
 
 ## License
 

@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Vocobox</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.mda.audiounit.Vocobox</string>
+	<string>com.vocobox.audiounit.Vocobox</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.2025</string>
 	<key>CFBundleSignature</key>
-	<string>mda </string>
+	<string>vcbx</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.2025</string>
 	<key>AudioComponents</key>
@@ -26,9 +26,9 @@
 			<key>type</key>
 			<string>aufx</string>
 			<key>subtype</key>
-			<string>Talk</string>
+			<string>vcbx</string>
 			<key>manufacturer</key>
-			<string>mda </string>
+			<string>vcbx</string>
 			<key>name</key>
 			<string>Vocobox</string>
 			<key>description</key>

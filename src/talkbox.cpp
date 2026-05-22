@@ -1,8 +1,9 @@
-// "mda Talkbox" v1.0  Copyright(c)2002 Paul Kellett (@mda-vst.com)
+// Vocobox — LPC Vocoder Audio Unit
+// Original DSP: Copyright(c)2002 Paul Kellett
 
 #include "AUEffectBase.h"
 
-#include "mda-common.h"
+#include "vocobox-common.h"
 
 
 //#define BUF_MAX         1600

@@ -66,11 +66,11 @@ target_link_libraries(Vocobox
 
 target_compile_definitions(Vocobox PRIVATE
     PLUGIN_VERSION=0x00010000
-    PLUGIN_MANUFACTURER_ID=0x6D646120
-    PLUGIN_MANUFACTURER_NAME="mda"
+    PLUGIN_MANUFACTURER_ID=0x76636278
+    PLUGIN_MANUFACTURER_NAME="Vocobox"
 )
 
 add_custom_command(TARGET Vocobox POST_BUILD
-    COMMAND /bin/echo -n "BNDLmda " > "$<TARGET_BUNDLE_CONTENT_DIR:Vocobox>/PkgInfo"
+    COMMAND /bin/echo -n "BNDLvcbx" > "$<TARGET_BUNDLE_CONTENT_DIR:Vocobox>/PkgInfo"
     COMMENT "Creating PkgInfo file"
 )
