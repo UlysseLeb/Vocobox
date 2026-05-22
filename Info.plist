@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Vocobox</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.mda.audiounit.Vocobox</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Vocobox</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.2025</string>
+	<key>CFBundleSignature</key>
+	<string>mda </string>
+	<key>CFBundleVersion</key>
+	<string>1.0.2025</string>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>aufx</string>
+			<key>subtype</key>
+			<string>Talk</string>
+			<key>manufacturer</key>
+			<string>mda </string>
+			<key>name</key>
+			<string>Vocobox</string>
+			<key>description</key>
+			<string>High Resolution LPC Vocoder</string>
+			<key>version</key>
+			<integer>65536</integer>
+			<key>factoryFunction</key>
+			<string>TalkboxFactory</string>
+			<key>resourceUsage</key>
+			<dict>
+				<key>network.client</key>
+				<false/>
+				<key>temporary-exception.files.all.read-write</key>
+				<false/>
+			</dict>
+			<key>sandboxSafe</key>
+			<true/>
+			<key>tags</key>
+			<array>
+				<string>Effects</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
