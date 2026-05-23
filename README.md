@@ -2,6 +2,16 @@
 
 An Audio Unit (v2) LPC vocoder for modern macOS with full Apple Silicon support.
 
+
+
+
+
+
+
+https://github.com/user-attachments/assets/33c8afb4-fd7b-48a1-aa85-9fcc0e82424c
+
+
+
 ## What it does
 
 Vocobox is a high-resolution vocoder based on Linear Predictive Coding (LPC). It takes two audio inputs:
